@@ -58,8 +58,14 @@ iface = gr.Interface(
         gr.Label(num_top_classes=3, label="Probabilités"),
         gr.Textbox(label="Conseil de recyclage")
     ],
+    examples=[
+
+        ["examples/plastic.png"]
+    ],
     title="Classification de déchets avec MobileNetV2",
-    description="Téléchargez une image de déchet pour connaître sa catégorie et obtenir des conseils de recyclage."
+    description="Téléchargez une image de déchet pour connaître sa catégorie et obtenir des conseils de recyclage.",
+    flagging_mode="never"
 )
+
 # Lancer l'application
 iface.launch()
